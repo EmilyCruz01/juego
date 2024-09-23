@@ -32,6 +32,11 @@ class ObstacleManager {
         obstacle.body.allowGravity = false;
     }
 
+
+    obstacle.setVelocityX(this.baseSpeed);
+        obstacle.body.allowGravity = false;
+    }
+
     updateObstacleSpeed(score) {
         const speed = Math.max(-250, -200 - Math.floor(score / 100) * 50);
         this.waterObstacles.setVelocityX(speed);
